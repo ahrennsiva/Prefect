@@ -1,0 +1,59 @@
+1.1 Why is programming useful?
+-https://www.youtube.com/watch?v=nKIu9yen5nc
+
+1.2 Your first program
+<ul>
+    <li>-Download Java SDK (http://www.oracle.com/technetwork/java/javase/downloads/index.html)</li>
+    <li>-Download BlueJ (http://www.bluej.org/), and create a new project.</li>
+    <li>-In your new project copy the following code:</li>
+</ul>
+//section this off with copy-able text box for code
+/**
+ * The HelloWorldApp class implements an application that
+ * simply prints "Hello World!" to standard output.
+ */
+class HelloWorldApp {
+    public static void main(String[] args) {
+        System.out.println("Hello World!"); // Display the string.
+    }
+}
+<ul>
+    <li>-Click on the compile button in the BlueJ interface.</li>
+</ul>
+
+<p><b>Functions</b> are procedures in programming. They are essentially 
+multiple instrucitons summarized into a single line or word of code pre-built into Java. For example computing a square root or solving
+an exponential equation, but not concerning users with how it is done.</p>
+
+<p><b>Strings</b> contains letters, numbers or symbols and are denoted with <b>""</b> around the string</p>
+    {question,Print your name as a string,input,"System.out.println("#Name");"} 
+    
+    
+<p><b>Variables</b> store different data types and can be referred to later in the code. Google Java primitive data types to see data types.</p>
+    <p><i>Example: int x=5; where x is the variable name and 5 is the data.</i></p>
+    {question,Store your name as the variable "my_name",input,"my_name="#Name";"} 
+    {question,Print the variable "my_name" using System.out.println found in Hello world example.,input,"System.out.println("Hello World!");"} 
+    
+<p><b>Math operations</b> are used to perform simple functions on multiple values.</p>
+    <p><i>Example: Addition (+), Subtraction (-), Multiplication (*), Division (/), Mod (%), Equivalence (==), Assignment (=)</i></p>
+    {question,Which operator would you use to multiply two integers?,input,"*"} 
+    
+<p><b>A loop</b> is a set instructions that is repeated multiple times until a certain condition is reached.</p> 
+<p><i>Example: for loops, while loops, do while loops.</i></p>
+    {question,Build a for loop that counts to 5 and then ends. Hint: Perform a google search on constructing loops in java.,input,"class Count {
+    public static void main(String[] args){
+         for(int i=1; i<6; i++){
+              System.out.println(i);
+         }
+    }
+}"
+} 
+    
+
+<p><b>an array</b> is a set of objects of the same type grouped together. Each object in an array 
+is called <b>an array element.</b></p>
+<p><i>Example: arrays of integers, array of characters, an array of strings.</i></p>
+    {question,Store each person's name in your family in an empty array named "family",input,"family=[];"} 
+
+<p><b>Object-oriented programming (OOP)</b> is a paradigm in coding related to objects.</p>
+    <a href=">https://docs.oracle.com/javase/tutorial/java/javaOO/">Learn more here!</a>

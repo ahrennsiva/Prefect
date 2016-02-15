@@ -1,0 +1,186 @@
+include head
+// meta(charset=&apos;UTF-8&apos;)
+//   | // Include Moxtra JavaScript Library
+//     script#moxtrajs(type=&apos;text/javascript&apos;, src=&apos;https://www.moxtra.com/api/js/moxtra-latest.js&apos;)
+//     | // Authenticate/Initialize and get the &quot;Access Token&quot; for the user
+//     | // Refer to the doc at https://developer.moxtra.com/docs/docs-oauth/#uniqueid to authenticate user based on UniqueID Method
+//     | // For other authentication methods and overview refer to the doc at https://developer.moxtra.com/docs/docs-authentication/
+//     | // In this example user is authenticated and access token is passed as a URL parameter
+//     | script(type=&apos;text/javascript&apos;).
+//     | function getURLParameter(name) {
+//     | return decodeURIComponent((new RegExp(&apos;[?|&amp;]&apos; + name + &apos;=&apos; + &apos;([^&amp;;]+?)(&amp;|#|;|$)&apos;).exec(location.search)||[,&quot;&quot;])[1].replace(/\\+/g, &apos;%20&apos;))||null
+//     | }
+//     | function parseURI() {
+//     | var uri = window.location.hash.substring(1);
+//     | var elements = uri.split(&apos;&amp;&apos;);
+//     | var data = new Object();
+//     | for(i = 0; i &lt; elements.length; i++) {
+//     | var cur = elements[i].split(&apos;=&apos;);
+//     | data[cur[0]] = cur[1];
+//     | }
+//     | return data;
+//     | }
+//     | urldata = parseURI();
+//     | access_token=urldata.access_token;
+//     | if (access_token) {
+//     | // Initialize Moxtra SDK Object
+//     | var options = {
+//     | mode: &quot;production&quot;,
+//     | client_id: &quot;insert_your_app_client_id&quot;, //
+//     | access_token: access_token,
+//     | invalid_token: function(event) {
+//     | //Triggered when the access token is expired or invalid
+//     | alert(&quot;Access Token expired for session id: &quot; + event.session_id);
+//     | }
+//     | };
+//     | Moxtra.init(options);
+//     | }
+//     | else {
+//     | //Authenticate and get access token for the user before proceeding further
+//     | console.log (&quot;No access token found&quot;);
+//     | }
+
+block content
+    body
+        .datatree(data-active= title data-user= JSON.stringify(user))
+        header
+            a(href='/app')
+                .logo 
+                    span.logo-block
+                    span.logo-text Prefect.
+            ul
+                a(href='/app')
+                    li.connect-courses Courses
+                a(href='/stats')
+                    li.connect-stats Stats
+                a(href='/jobs')
+                    li.connect-job Jobs
+                a(href='/mentor')
+                    li.connect-mentor Mentors 
+                li.connect-user
+                    | !{user.first_name} !{user.last_name}
+            .clear
+        sidebar
+            ul
+                -if(title === 'course'){
+                    li.opener-side
+                        span !{course.name}
+                    li.course-sections
+                        -for(var i in course.steps){
+                            - var selected = '';
+                            -if(user.courses_active[i] && parseFloat(user.courses_active[i].step) === parseFloat(i)){
+                                - selected = 'selected';
+                            -} else if(!user.courses_active[i] && parseFloat(i) === 0){
+                                - selected = 'selected';
+                            -} else {
+                                - selected = '';
+                            -}
+                            .course-section(data-step=i class=selected) !{course.shortnumber}.!{parseFloat(i) + 1} !{course.steps[i].name}
+                        -}
+                -} else {
+                    li.opener-side
+                        span
+                        span.fa.fa-smile-o
+                        span Welcome, !{user.first_name}!
+                    a(href='/app')
+                        li.connect-courses
+                            span.cnt-bar(style="background-color:#F5A623")
+                            span.fa.fa-home(style="font-size:25px; color:#F5A623")
+                            span Courses
+                    a(href='/stats')
+                        li.connect-stats
+                            span.cnt-bar(style="background-color:#95C53C")
+                            span.fa.fa-bar-chart-o(style="color:#95C53C")
+                            span Stats
+                    a(href='/jobs')
+                        li.connect-jobs
+                            span.cnt-bar(style="background-color:#4A90E2")
+                            span.fa.fa-suitcase(style="color:#4A90E2")
+                            span Jobs
+                    a(href='/mentor')
+                        li.connect-mentor
+                            span.cnt-bar(style="background-color:#E95C6D")
+                            span.fa.fa-users(style="color:#E95C6D")
+                            span Mentors
+                    li.connect-settings
+                        span.cnt-bar(style="background-color:#A3A3A3")
+                        span.fa.fa-gear(style="color:#A3A3A3")
+                        span Settings
+                -}
+        content
+            -if(title === 'courses'){
+                subheader
+                    .sub-traversal
+                        .sub-button.selected Current Courses
+                        .sub-button New Courses
+                        .sub-button Completed Courses
+                .lower-content
+                    -for(var i in courses){
+                        .course(data-cid=courses[i].cid)
+                            .course-image(style='background-image:url("' + courses[i].image + '")')
+                            .course-details
+                                .course-title= courses[i].name
+                                .course-description= courses[i].description
+                                .course-actions
+                                    a(href="/courses/" + courses[i].cid)
+                                        -if(user.courses_active[courses[i].cid]){
+                                            span.course-start(style='background-color:#F5A623') Continue Course
+                                        -} else if(user.courses_completed[courses[i].cid]){
+                                            span.course-start(style='background-color:grey') Course Completed
+                                        -} else {
+                                            span.course-start Start Course
+                                        -}
+                                    -if(user.courses_completed[courses[i].cid]){
+                                        span#retake-course.course-testout(data-cid=courses[i].cid) Retake Course
+                                    -} else {
+                                        a(href="/courses/" + courses[i].cid + "?trytest=true")
+                                            span.course-testout Know it all? Test Out.
+                                    -}
+                            .clear
+                    -}
+            -} else if(title === 'course'){
+                .pass-class
+                    .p-overlay
+                        .p-modal
+                            .p-modal-header Congrats!
+                            .p-modal-text
+                                p Congrats, you passed the class! <br> You will be rewarded +100 exp plus some extra credit!
+                                p This class will appear on your resume and will help companies find you better :)
+                            .p-modal-button#passed-test(data-cid=course.cid) Complete Class
+                .fail-class
+                    .p-overlay
+                        .p-modal
+                            .p-modal-header Oh no!
+                            .p-modal-text
+                                p You seemed to fail the final test, <br> but don't fret, <span style='text-decoration:underline'>you can retake the course!</span>
+                                p We won't tell anyone about this, just keep trying!
+                            .p-modal-button#failed-test(data-cid=course.cid) Go to the Main Menu
+                subheader
+                    .sub-traversal
+                        .sub-alt-button#saveandquit(data-cid=course.cid) Save and Quit
+                .cont
+                    .content.normal
+                        -for(var i in course.steps){
+                            -if(!course.steps[i].test){
+                                .lesson-container.normal-container(id='step_' + i data-course= JSON.stringify(user.courses_active[course.cid]))
+                                    h4 !{course.shortnumber}.!{parseFloat(i) + 1} !{course.steps[i].name}
+                                    p !{course.steps[i].text}
+                            -} else {
+                                .lesson-container.test-container(id='step_' + i data-course= JSON.stringify(user.courses_active[course.cid]))
+                                    h4 !{course.shortnumber}.!{parseFloat(i) + 1} !{course.steps[i].name}
+                                    p !{course.steps[i].text}
+                                
+                            -}
+                        -}
+                        -if(course.steps[i].test){
+                            .complete-test Complete Test
+                        -}
+                        
+                        
+            -} else if(title === 'stats'){
+                include parts/stats
+            -}  else if(title === 'jobs'){
+                include parts/jobs
+            -} else if(title === 'mentor'){
+                include parts/mentor
+            -}

@@ -1,0 +1,85 @@
+.graph-object
+  .graph-overlay
+    - var totexp = 0;
+    -for(var i in user.exp){
+    - totexp = user.exp[i] + totexp;
+    -}
+    .graph-stat 
+        span.graph-stat-title Level
+        span.graph-stat-data !{Math.floor(totexp/100)}
+    - var x = 0;
+    -for(var i in user.courses_active){
+    - x++;
+    -}
+    - var y = 0;
+    -for(var i in user.courses_completed){
+    - y++;
+    -}
+    
+    - var totexp = 0;
+    -for(var i in user.exp){
+    - totexp = user.exp[i] + totexp;
+    -}
+    .graph-stat
+        span.graph-stat-title Courses
+        span.graph-stat-data !{x + y}
+    .graph-stat
+        span.graph-stat-title Experience
+        span.graph-stat-data#user_exp !{totexp}
+  .graph-content
+    svg
+subheader
+    style.
+        .sub-button.selected{
+            background-color:#95C53B;
+        }
+    .sub-traversal
+        .sub-button.selected Best Subjects
+        .sub-button Subjects To Review
+        .sub-button Subjects To Work On
+.lower-content
+    -for(var i in user.courses_completed) { user.courses_active[i] = user.courses_completed[i]; }
+    -newData = user.courses_active;
+    -for(var i in newData){
+        -var skill;
+        -var skolo;
+        -var req;
+        -if(newData[i].answered_wrong.length < 1){ req = 'You are on fire! Employers will notice this first on your resume!'; skill = 'Excellent'; skolo = "#6CC53B"; } else if(newData[i].answered_wrong.length < 3 && newData[i].answered_wrong.length > 1) { skill = 'Good'; skolo = "#95C53B"; } else if(newData[i].answered_wrong.length < 5 && newData[i].answered_wrong.length >= 3) { skill = 'Proficient'; skolo = "#D2DA54"; } else if(newData[i].answered_wrong.length >= 5) { skill = 'Needs Work'; skolo = "#DA5454"; }
+        .skill
+            .skill-left
+                .skill-genfactor(style='color:' + skolo)= skill
+                .skill-whyfactor For errors < !{newData[i].answered_wrong.length} per lesson.
+            .skill-right
+                .skill-whatfactor= newData[i].class
+                .skill-okthen= req
+                .skill-then
+                    span.skill-whatnow What can I work on?
+                    span.skill-brag What are my strong points?
+            .clear
+    -}
+// .stat_row
+//     ul
+//         li Level
+//         li Courses
+//         li Completed Lessons
+    
+//     .stat_row
+//       ul.list-unstyled
+//         li
+//           a.btn-2(href='#') Best Subjects
+//         li
+//           a.btn-2(href='#') Subjects to Review
+//     hr
+//     .row
+//       .col-2
+//         font(color='#6cc53b') Excellent
+//         br
+//         p (At least 90% in course)
+//       .col-10
+//         | Mathematics 
+//         p You are on fire! Employers will notice this first on your resume!
+//         ul.list-unstyled
+//           li
+//             a.btn-3(href='#') See where I can improve
+//           li
+//             a.btn-4(href='#') See where my strengths are

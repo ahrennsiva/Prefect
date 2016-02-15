@@ -1,0 +1,77 @@
+question : the actual question : the type of response : answer
+
+{question,What is 1+1?,input,2} 
+
+{question,What is 1+1?,multiplechoice[Dogs&Cats&Bob&Joe],2}
+
+
+$('.datatree').data('user-exp');
+
+{
+
+
+    "_id": {
+        "$oid": "55fcee83e4b0d3b5acc422f6"
+    },
+    "user_id": "Joebob1",
+    "first_name": "Joe",
+    "last_name": "Bob",
+    "dob": "May 16 1990",
+    "dob_shrtdt": "05161990",
+    "exp": 3540,
+    "courses_active": [
+        {
+            "cid": "cgf2",
+            "answered_correct": [
+                "cgf2001",
+                "cgf2002",
+                "cgf2003"
+            ],
+            "answered_wrong": [
+                "cgf2004",
+                "cgf2005"
+            ],
+            "step": 4,
+            "test": {
+                "sessions": [],
+                "retaken": 0
+            }
+        }
+    ],
+    "courses_completed": [
+        {
+            "cid": "cgf2",
+            "answered_correct": [
+                "cgf1001",
+                "cgf1002",
+                "cgf1003"
+            ],
+            "answered_wrong": [
+                "cgf1005"
+            ],
+            "step": 9,
+            "test": {
+                "sessions": [
+                    {
+                        "answered_correct": [
+                            "cgf2001",
+                            "cgf2002",
+                            "cgf2003"
+                        ],
+                        "answered_wrong": [
+                            "cgf2004",
+                            "cgf2005"
+                        ]
+                    }
+                ],
+                "retaken": 0
+            }
+        }
+    ],
+    "job_offers_active": [
+        {
+            "cid": "tg430",
+            "step": 1
+        }
+    ]
+}

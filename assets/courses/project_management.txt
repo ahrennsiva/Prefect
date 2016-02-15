@@ -1,0 +1,39 @@
+course objective
+
+What is management
+
+<p><b>Management</b> is the act of controlling people in a business setting. Management coordinates people to achieve goals as well as
+meet objectives with resources at your disposal.</p>
+
+
+project planning
+
+<p><b>Project planning</b>  is a component of management. It involves using schedules to plan your business, and coordinate with others.
+Initially, the manager defines what work is to be assigned to which members, and create a scope for the timeframe of the project.</p>
+
+time management/scheduling
+   <p><b> Schedules</b>  can be created to regulate the work flow into subcategories. This might include an estimation on time spent 
+   on activities, the sequence of activities, and overall goals and deadlines. Using a Gantt chart is a way of organizing deadlines. </p>
+
+employee efficiency
+    By assigning people to specific jobs, work can be done in parallel
+    Roles can be split up if jobs are not dependent on each other
+
+cost estimating/budgeting
+     <p><b> Budget</b> is an estimation of how much money the project is allowed for resources
+    Searching a number of sources for quotes on the same product gives an idea for cost estimation</p>
+
+payroll
+    This requires analysis of the employee's qualifications to determine their compensation. Common data sheet figures for salary
+    can be found online. It is common for this to vary from business to business and have a location basis.
+    
+acquiring resources/funding
+    Reaching out to companies and education offices may provide resources for projects
+    This involves applying to grants if your project satisfies the mission statements 
+
+team development
+    
+{question,You're organizing a hackathon, describe a work schedule to plan the organization of the event day,input,"open"}
+{question,How will you split the jobs up between 20 people?, input,"open"}
+{question,Create a budget for the event to include food, transportation, equipment, decorations, venue, advertisements, and prizes,input,"open"}
+{question,Type an email to a relevant company to request funding for your event, input,"open"}

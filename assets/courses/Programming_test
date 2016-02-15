@@ -1,0 +1,5 @@
+{question, What operator is used for modulus?, multiplechoice[%&+&-&/],1 }
+{question, Which is not a type of loop?, multiplechoice[For&While&Do While&Binary], input,4 }
+{question, What programming language are you using?, multiplechoice[C++&Java&C#&Visual Basic],2 }
+{question, Who wasn't in the programming video?, multiplechoice[Bill Gates&Mark Zuckerberg&Gabe Newell&Steve Jobs],4 }
+{question,Which is a proper way to declare a variable,multiplechoice[int x = 3&int x == 3&x === 3,& =3,1}

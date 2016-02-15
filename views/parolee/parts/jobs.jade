@@ -1,0 +1,21 @@
+subheader
+    style.
+        .sub-button.selected{
+            background-color:#4A90E2;
+        }
+    .sub-traversal
+        .sub-button.selected Applied Jobs
+        .sub-button Subjects Current Offers
+        .sub-button Subjects Recently Closed Positions
+.lower-content
+    -for(var i in jobs){
+        .course(data-cid=jobs[i].cid)
+            .course-image(style='background-image:url("/customers/logos/' + jobs[i].oid + '.png")')
+            .course-details
+                .course-title !{jobs[i].name} <span class="course-location">!{jobs[i].location}</span>
+                .course-description= jobs[i].description
+                .course-actions
+                    a(href="/jobs/" + jobs[i].cid)
+                        span.course-start(style='background-color:#F5A623') Accept Offer
+            .clear
+    -}

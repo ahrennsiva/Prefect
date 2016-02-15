@@ -1,0 +1,43 @@
+1.0 adding/subtracting
+    https://www.youtube.com/watch?v=9RqTLaBGO1w
+    
+1.1 multiplying/divison
+    <p><b>Multiplying</b> is just an extension of adding where you add the same number the amount of times it is being multiplied by.</p>
+    <p><i>For example if you multiply 3 and 4, you are adding the number 3, four times.</i></p> 
+    <p>The reverse is true where you are adding 4, three times.</p>
+    <p><b>Division can be explained using the concept of splitting objects between people.</b></b> 
+    <p><i>For example if you have 12 slices of pizza,and there are four people, how many slices will each person get if we split them evenly? To solve this problem, imagine giving each person
+    1 slice before handing out the next slice, and so on until you run out of slices. This will result in three slices per person.</i></p>
+    
+    {question,There are 10 people are your birthday party, and you have 20 slices of cake. How many slices of cake does each person get?,input,2} 
+    
+
+1.2 algebra
+    <p>Basic algebra involves solving for an unknown variable in an equation. To do this, we isolate our variable to one side of the equation,
+    and have the other side exclusively for numbers. If your variable has a coefficient, you bring all numbers to one side, and end by dividing 
+    by the coefficient on both sides of the equation last.</p>
+    
+    Ex. 2+x=7
+        x=7-2
+        x=5
+    Ex. 2x+10=20
+        2x=20-10
+        2x=10
+        2x/x = 10/x
+        x=5
+    {question,Solve for x in the equation: x-3 = 6,input,9}    
+    {question,Solve for x in the equation: 5x-3 = 27,input,6}    
+    
+1.3 Mean, Median, Mode, Range
+    
+    <p><b>Mean</b> refers the average of a set of numbers. To find the average, add up all of the numbers and then divide the sum
+    by the number of elements that you have in a set.</p>
+    <p><b>Median</b> refers to the number in the exact middle number of an ordered data set from lowest to highest. If there are two values 
+    in the middle you add those two values and divide by 2.</p>
+    <p><b>Range</b> refers to the difference between the highest and lowest valued numbers (Subtract lowest from highest). </p>
+    <p><b>Mode</b> refers to the number that appears most frequently in the set. If two numbers have the same frequency, then there is no mode. </p>
+    
+    {question,Find the mean for (1,1,4,3,5,2,8),input,3}
+    {question,Find the median for (1,1,4,3,5,2,8),input,3}
+    {question,Find the mode for (1,1,4,3,5,2,8),input,1}
+    {question,Find the range for (1,1,4,3,5,2,8),input,7}

@@ -1,0 +1,5 @@
+{question,Add 65732 and -472819, multiplechoice[1130139&538551&-407807&184501],3}
+{question,Divide 99 by 3, multiplechoice[297&104&96&33],input,4}
+{question,Solve for x in x+7-9+1=11, multiplechoice[12&3&1&6],1}
+{question,Solve for x in 9x+3=12, multiplechoice[0&1&3&2],2}
+{question,Find the mean for (4,3,2,6,4,1,8),multiplechoice[4&7&3&None],1}

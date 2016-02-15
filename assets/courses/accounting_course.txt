@@ -1,0 +1,76 @@
+Purpose of accounting
+
+-Assets and Liabilities
+
+<p><b>Assets and liabilities</b> are opposites of one another. Assets are money and/or items held by the company that provide it value. Liabilities are essentially 
+losses to the company, in the sense that they need to be paid off at some point. There are current assets and liabilities, as well as, long term assets
+and liabilities. They rely on a time basis for the asset's use, or time to pay off the liability within. Cash is the most common current asset. </p>
+
+{question,What would you categorize cash to be?,multiplechoice[Current Asset&Current Liability&Long Term Asset&Long Term Liability],1} 
+
+
+Functions
+
+
+-GAAP
+<p><b>GAAP</b> are the generally accepted accounting principles. They are in place so investors have a basis to follow to analyze companies
+without much variance between firms. Common GAAP include revenue recognition, matching principle, fiscal period, and many more that can
+be read about online. There are multiple principles to follow during accounting practice, in terms of GAAP.</p>
+
+{question,How many GAAP are there? Hint: It's 9+1.,multiplechoice[5&6&8&10],4} 
+
+Sales + Accounts Receivable
+
+<p><b>Sales revenue is generally related directly to accounts receivables.</b> Accounts receivables are created once a sale is made where the 
+customer doesn't pay with cash up front. This is a generally accepted practice when using card systems for payment at a later time. </p>
+
+{question,Is it acceptable to allow accounts receivables to be created through sales?,multiplechoice[Yes&No& None of the above&All of the above],1} 
+
+
+-Accounts Payable 
+
+<p><b>Accounts Payable</b> generated when money is owed by the company to creditors. This is generated when a company creates accounts receivables for another company.
+This results in a requirement to pay money within a certain time frame either predetermined or based on a general consensus for what
+is reasonable. These show up on balance sheets as liabilities to be paid later. It is better to have more accounts receivables than accounts
+payables if your accounts receivables are consistently paid.</p>
+
+{question,What is the best term to classify an accounts payable?,multiplechoice[Asset&Liability& Income Statement&Balance Sheet],2} 
+
+ 
+-Balance Sheets
+   <p><b>Balances Sheets</b>  are financial statement documents that indicate your assets in comparison to liabilities and owner's equity. The fundamental equation
+    in this system is that Assets= Liabilities + Owner's Equity.</p>
+    
+   <b> Ex. If Assets= $1000 and Liabilities= $500, then subsequently Owner's Equity is $500.</b>
+    
+    {question,if Liability is $1000 and Owner's Equity is $1000, what is the value of the company's assets?,multiplechoice[100&200&1000&2000],4} 
+    
+    
+-Financial Statements
+     <p><b> Financial Statements</b> are a formal summary of financial status within a written document. Examples include the income statment and balance sheet. They are used by
+    upper management for financial decisions in terms of investing in companies, payroll, and further business decisions. It helps in indicating 
+    revenues and losses for the current period in an analytical way. </p>
+    
+    {question,Who generally looks at these financial statements?,multiplechoice[Managers&Low Level Accountants&Programmers&Engineers],1}
+    
+-Income Statements
+
+    <p><b>Income statements</b> are used to measure a company's financial status over the course of a specific period of time.
+    It can also indicate net profit and loss to the manager. Investors and analysts would use this to determine  the operations of the business
+    for the purpose of finding out the way the business runs. They will rely on the income statement generally for making any and all financial
+    decisions.</p>
+    
+    {question,What is relied on for making any and all financial decision?,input,Income Statement} 
+    
+-Accounting Cycles
+<p>You begin by collecting and verifying the source documents for your accounts. You proceed to analyze and record all the transactions.
+You then prepare practice documents such as trial balances and worksheets. After this point you proceed to build legitimate financial statements
+in a first draft. You then proceed to adjust entries for any errors that need to be considered. The last step is to close all the entries.</p>
+
+ {question,What is the last step in the accounting cycle?,multiplechoice[Closing Entries&Collecting Data&Analyzing Transactions& Practice Documents],1}
+ 
+
+
+
+
+
